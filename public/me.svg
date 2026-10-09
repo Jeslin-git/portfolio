@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 640" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="52" x2="440" y1="44" y2="628" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D9CFF5"/>
+      <stop offset=".52" stop-color="#CFE4FA"/>
+      <stop offset="1" stop-color="#FFD9C7"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="111" x2="413" y1="420" y2="626" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF1BF"/>
+      <stop offset="1" stop-color="#F9D5E5"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="219" x2="318" y1="152" y2="355" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4C5A9"/>
+      <stop offset="1" stop-color="#D99478"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h520v640H0z"/>
+  <circle cx="399" cy="149" r="83" fill="#FFF1BF" fill-opacity=".8"/>
+  <circle cx="105" cy="358" r="39" fill="#CDEFE0" fill-opacity=".9"/>
+  <path fill="#443B4E" d="M161 271c0-112 47-170 122-170 80 0 126 62 126 170v80H161v-80Z"/>
+  <path fill="url(#skin)" d="M194 232c0-72 38-119 91-119 57 0 94 47 94 119v44c0 69-37 114-94 114-53 0-91-45-91-114v-44Z"/>
+  <path fill="#443B4E" d="M183 240c-9-70 17-137 89-145 47-5 90 22 108 67-28 1-55-8-77-27-21 35-64 62-120 64v41h-8Z"/>
+  <path fill="#443B4E" d="M197 282c-27 2-41-12-45-37-8 63 3 116 35 146 5-31 8-68 10-109Zm178-9c26 5 38-9 42-32 8 60-1 111-29 145-7-30-11-67-13-113Z"/>
+  <path stroke="#62473F" stroke-linecap="round" stroke-width="5" d="M238 265h20m45 0h20"/>
+  <path stroke="#A75F58" stroke-linecap="round" stroke-width="4" d="M270 318c9 7 20 7 29 0"/>
+  <circle cx="250" cy="284" r="4" fill="#443B4E"/>
+  <circle cx="313" cy="284" r="4" fill="#443B4E"/>
+  <path fill="#F0B09A" d="M219 302c10-7 20-7 29 0-4 11-10 15-17 15-7 0-11-5-12-15Zm93 0c10-7 20-7 29 0-4 11-10 15-17 15-7 0-11-5-12-15Z"/>
+  <path fill="url(#skin)" d="M239 367h92v93h-92z"/>
+  <path fill="url(#shirt)" d="M151 447c23-24 54-37 92-42l42 47 42-47c40 7 70 21 91 45l27 190H91l25-151c6-19 18-33 35-42Z"/>
+  <path fill="#D9CFF5" d="m243 406 42 46-35 43-43-65c9-11 21-19 36-24Zm90 0-48 46 35 43 44-65c-8-11-19-19-31-24Z"/>
+  <path stroke="#C78D78" stroke-width="3" d="M284 452v190"/>
+  <path fill="#CDEFE0" d="m396 449 29 34-26 18 29 25-33 13-25-33 24-19-25-17 27-21Z"/>
+  <path fill="#2B2A33" fill-opacity=".1" d="M0 602c92-41 175-26 256-11 81 15 169 26 264-2v51H0v-38Z"/>
+  <text x="260" y="580" fill="#2B2A33" fill-opacity=".55" font-family="sans-serif" font-size="12" letter-spacing="3" text-anchor="middle">PORTRAIT PLACEHOLDER</text>
+</svg>
