@@ -55,7 +55,7 @@ Outside code, I&apos;m a digital artist and I mess around in Figma and Photoshop
 
           <div className="availability availability-main">
             <span className="availability-dot" />
-            Available for SDE roles
+            Available for SDE/AI roles
             <span className="availability-note">· let&apos;s make something good</span>
           </div>
 
@@ -125,7 +125,7 @@ Outside code, I&apos;m a digital artist and I mess around in Figma and Photoshop
             <p>
               Code Review Assistant helps developers get AI-assisted feedback
               on their code, making it easier to spot potential issues and
-              think through improvements before moving on.
+              think through improvements before moving on. This was a solo project built with AI assisistance.
             </p>
             <p className="project-note">
               To try it: sign up, add your own API key in Settings. The backend is on a free tier, so the first load can take about
