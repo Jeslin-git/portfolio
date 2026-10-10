@@ -17,7 +17,7 @@ The current phase includes the responsive hero, pastel light/dark theme, typogra
 
 ## Project screenshots
 
-The first project gallery expects three PNG screenshots in `public`: `project1a.png`, `project1b.png`, and `project1c.png`. The gallery scrolls sideways on both desktop and mobile and shows styled placeholders until the screenshots are added. Its live demo links to the Code Review Assistant dashboard deployment.
+The Code Review Assistant gallery uses `public/project1a.png` through `project1c.png`. The AI Resume Screening Assistant gallery uses `public/project2a.png` through `project2d.png`. Galleries scroll sideways on desktop and mobile and show styled placeholders for any missing screenshots. Project details for the resume screener are marked as coming soon until provided.
 
 ## Deploy to Vercel
 

@@ -459,6 +459,10 @@ button:focus-visible {
   letter-spacing: -0.04em;
 }
 
+.project-title-row h2.project-title-long {
+  font-size: clamp(3rem, 7.1vw, 6.7rem);
+}
+
 .project-sticker {
   display: grid;
   width: 92px;
@@ -919,6 +923,11 @@ button:focus-visible {
   .project-sticker {
     width: 70px;
     font-size: 0.5rem;
+  }
+
+  .project-title-row h2.project-title-long {
+    font-size: clamp(2.8rem, 11vw, 4.2rem);
+    line-height: 0.98;
   }
 
   .project-gallery-wrap {

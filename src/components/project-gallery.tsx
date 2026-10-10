@@ -3,14 +3,26 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 
-const screenshots = [
-  { src: "/project1a.png", label: "Project screenshot 1 of 3" },
-  { src: "/project1b.png", label: "Project screenshot 2 of 3" },
-  { src: "/project1c.png", label: "Project screenshot 3 of 3" },
-];
+type ProjectGalleryProps = {
+  imagePrefix: string;
+  imageCount: number;
+  projectTitle: string;
+};
 
-export default function ProjectGallery() {
+export default function ProjectGallery({
+  imagePrefix,
+  imageCount,
+  projectTitle,
+}: ProjectGalleryProps) {
   const galleryRef = useRef<HTMLDivElement>(null);
+  const screenshots = Array.from({ length: imageCount }, (_, index) => {
+    const imageLetter = String.fromCharCode(97 + index);
+    return {
+      src: `/${imagePrefix}${imageLetter}.png`,
+      fileName: `${imagePrefix}${imageLetter}.png`,
+      label: `${projectTitle} screenshot ${index + 1} of ${imageCount}`,
+    };
+  });
   const [missingImages, setMissingImages] = useState<boolean[]>(
     screenshots.map(() => false),
   );
@@ -30,7 +42,9 @@ export default function ProjectGallery() {
   return (
     <div className="project-gallery-wrap">
       <div className="gallery-controls">
-        <p className="gallery-hint">Swipe or scroll to see all three screens</p>
+        <p className="gallery-hint">
+          Swipe or scroll to see all {imageCount} screens
+        </p>
         <div className="gallery-buttons">
           <button
             className="gallery-button"
@@ -53,7 +67,7 @@ export default function ProjectGallery() {
       <div
         className="project-gallery"
         ref={galleryRef}
-        aria-label="Code Review Assistant screenshots"
+        aria-label={`${projectTitle} screenshots`}
         tabIndex={0}
       >
         {screenshots.map((screenshot, index) => (
@@ -62,7 +76,7 @@ export default function ProjectGallery() {
               <div className={`screenshot-placeholder placeholder-${index + 1}`}>
                 <span className="placeholder-number">0{index + 1}</span>
                 <span>Drop your screenshot here</span>
-                <code>public/project1{String.fromCharCode(97 + index)}.png</code>
+                <code>public/{screenshot.fileName}</code>
               </div>
             ) : (
               <Image
@@ -80,7 +94,9 @@ export default function ProjectGallery() {
                 }}
               />
             )}
-            <figcaption>SCREEN 0{index + 1} <span>— CODE REVIEW ASSISTANT</span></figcaption>
+            <figcaption>
+              SCREEN 0{index + 1} <span>— {projectTitle.toUpperCase()}</span>
+            </figcaption>
           </figure>
         ))}
       </div>

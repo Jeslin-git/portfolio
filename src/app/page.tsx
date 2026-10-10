@@ -41,14 +41,16 @@ export default function Home() {
             <span className="name">I AM JESLIN<span className="name-period">.</span></span>
           </h1>
           <p className="role-line">
-            Full-stack developer
+            Developer in the making
             <br />
-            <span className="role-secondary">& UI/UX designer</span>
+            <span className="role-secondary">(& Occasional designer)</span>
           </p>
           <p className="hero-description">
-            Final-year BTech CS student at MACE Kothamangalam, also pursuing the
-            IIT Madras BSc program and leading web for IEEE MACE. I turn ideas
-            into useful things—with a little extra love for the details.
+            I’m a final-year CS student who learns by building stuff, breaking it, and fixing it again. (One day of deployment errors and I’ll never forget what CORS is.)
+
+I’m into web apps and AI tools, and looking for my first SDE role where I can keep building and learning fast.
+
+Outside code, I&apos;m a digital artist and I mess around in Figma and Photoshop, overthink every movie I watch, and fall into research rabbit holes.
           </p>
 
           <div className="availability availability-main">
@@ -110,7 +112,11 @@ export default function Home() {
           </div>
         </div>
 
-        <ProjectGallery />
+        <ProjectGallery
+          imagePrefix="project1"
+          imageCount={3}
+          projectTitle="Code Review Assistant"
+        />
 
         <div className="project-details">
           <article className="project-summary">
@@ -122,13 +128,12 @@ export default function Home() {
               think through improvements before moving on.
             </p>
             <p className="project-note">
-              The review service runs on a free-tier backend, so its first
-              request may take about a minute to wake up. Subsequent requests
-              should be quicker.
+              To try it: sign up, add your own API key in Settings. The backend is on a free tier, so the first load can take about
+      a minute to wake up. Subsequent requests are quicker.
             </p>
             <a
               className="project-live-link"
-              href="https://codeai-axurqlnye-jeslins-projects-5f8dd491.vercel.app/dashboard"
+              href="https://codeai-swart.vercel.app"
               target="_blank"
               rel="noreferrer"
             >
@@ -137,14 +142,80 @@ export default function Home() {
           </article>
 
           <article className="project-requirements">
-            <p className="detail-label">PROJECT REQUIREMENTS</p>
-            <h3>Designed around a simple review flow.</h3>
-            <ul>
-              <li>Let a developer submit code for an AI-assisted review.</li>
-              <li>Present useful feedback in a clear, easy-to-scan format.</li>
-              <li>Keep the experience straightforward on desktop and mobile.</li>
-            </ul>
+            <p className="detail-label">TRY IT IN 3 STEPS</p>
+            <h3>Takes about two minutes.</h3>
+            <ol>
+              <li>Open the live demo and sign up.</li>
+              <li>
+                In Settings, add an AI provider. Gemini works and has a free tier: get
+                a free key at aistudio.google.com/apikey.
+              </li>
+              <li>Upload a ZIP or paste some code, run a review, then chat about the findings.</li>
+            </ol>
+            <p className="project-note">
+              Tip: use a free-tier key, not your main one.
+            </p>
           </article>
+        </div>
+      </section>
+
+      <section
+        className="project-section"
+        id="project-2"
+        aria-labelledby="project-title-2"
+      >
+        <div className="project-heading">
+          <p className="project-eyebrow"><span /> SELECTED WORK · 02</p>
+          <div className="project-title-row">
+            <div>
+              <p className="project-number">02 / AI TOOL</p>
+              <h2 className="project-title-long" id="project-title-2">
+                AI Resume<br /><em>Screening Assistant.</em>
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <ProjectGallery
+          imagePrefix="project2"
+          imageCount={4}
+          projectTitle="AI Resume Screening Assistant"
+        />
+
+        <div className="project-details">
+  <article className="project-summary">
+    <p className="detail-label">THE PROJECT</p>
+    <h3>Resumes in, ranked matches out.</h3>
+    <p>
+      AI Resume Screening Assistant ranks resumes against a job description,
+      so recruiters can see the best-fitting candidates first instead of
+      reading every resume. Built by a team of 8 during a one-week
+      MACE–AIA/Cognizant hackathon.
+    </p>
+    <a
+              className="project-live-link"
+              href="https://ai-resume-screener-8399.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              OPEN LIVE DEMO <span aria-hidden="true">↗</span>
+            </a>
+  </article>
+
+  <article className="project-requirements">
+    <p className="detail-label">MY PART</p>
+    <h3>The matching engine.</h3>
+    <ul>
+      <li>TF-IDF to match the exact skills and keywords in a resume against the job description.</li>
+      <li>Embeddings to catch meaning, so similar skills still match even when the wording differs.</li>
+      <li>The scoring logic that turns those signals into a ranked match score.</li>
+    </ul>
+    <p className="project-note">
+      Stack: Python, scikit-learn. Teammates built the rest of the app around it.
+    </p>
+
+          </article>
+
         </div>
       </section>
     </main>
